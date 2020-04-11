@@ -68,6 +68,7 @@ class _LoginScreenState extends State<Login> {
                       _buildLoginBtn(),
                       _buildSignInWithText(),
                       _buildSocialBtnRow(),
+                      _buildSignupBtn(),
                     ],
                   ),
                 ),
@@ -267,6 +268,34 @@ class _LoginScreenState extends State<Login> {
           image: DecorationImage(
             image: logo,
           ),
+        ),
+      ),
+    );
+  }
+
+  Widget _buildSignupBtn() {
+    return GestureDetector(
+      onTap: () => print('Sign up button pressed'),
+      child: RichText(
+        text: TextSpan(
+          children: [
+            TextSpan(
+              text: 'Don\'t have an account? ',
+              style: TextStyle(
+                color: Colors.white,
+                fontSize: 18.0,
+                fontWeight: FontWeight.w400
+              ),
+            ),
+            TextSpan(
+              text: "Sign Up",
+              style: TextStyle(
+                color: Colors.white,
+                fontSize: 18.0,
+                fontWeight: FontWeight.bold
+              ),
+            ),
+          ],
         ),
       ),
     );
